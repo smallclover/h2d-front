@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./", //为了在ts中识别需要添加配置
+        "paths": {
+            "@/*": ["./src/*"] //为了在ts中识别需要添加配置
+        },
+        "target": "ES2020",
+        "useDefineForClassFields": true,
+        "module": "ESNext",
+        "lib": ["ES2020", "DOM", "DOM.Iterable"],
+        "skipLibCheck": true,
+
+        /* Bundler mode */
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "preserve",
+
+        /* Linting */
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true
+    },
+    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+    "references": [{ "path": "./tsconfig.node.json" }],
+    "baseUrl": ".",
+    "paths": {
+        "@/*": ["src/*"],
+        "comps/*": ["src/components"],
+        "views/*": ["src/views/*"],
+        "store/*": ["src/store/*"]
+    }
+}
